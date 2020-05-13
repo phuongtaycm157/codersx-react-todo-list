@@ -4,7 +4,7 @@ import '../Styles/LoginForm.css';
 function Title () {
   return <span className="login-form-title">Sign in</span>;
 }
-function Form () {
+function Form (props) {
   return (
     <form action="#" className="login-form-form">
       <div className="form-group">
@@ -14,6 +14,7 @@ function Form () {
           className="input" 
           type="text" 
           placeholder="Luong Quy tan"
+          value={props.email? props.email: ""}
         />
       </div>
       <div className="form-group">
@@ -52,7 +53,7 @@ class LoginForm extends React.Component {
     return (
       <div className="login-form">
         <Title />
-        <Form />
+        <Form email={this.props.email} />
         <ForgotSelector />
       </div>
     )
