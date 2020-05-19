@@ -11,9 +11,49 @@ function Selector (props) {
 }
 
 class TabMenu extends React.Component {
+  constructor() {
+    super();
+    this.instanceElements = [
+      {
+        id: 1,
+        title: 'HOME',
+        icon: <i class="fas fa-home"></i>,
+        status: 'active',
+        url: '#'
+      },
+      {
+        id: 2,
+        title: 'DEALS',
+        icon: <i class="fas fa-gift"></i>,
+        status: 'none',
+        url: '#'
+      },
+      {
+        id: 3,
+        title: 'UPLOAD',
+        icon: <i class="fas fa-cloud-upload-alt"></i>,
+        status: 'none',
+        url: '#'
+      },
+      {
+        id: 4,
+        title: 'WORK',
+        icon: <i class="fas fa-mug-hot"></i>,
+        status: 'none',
+        url: '#'
+      },
+      {
+        id: 5,
+        title: 'SETTINGS',
+        icon: <i class="fas fa-cog"></i>,
+        status: 'none',
+        url: '#'
+      }
+    ];
+  }
   render() {
-    const selectors = this.props.instance.map(element => {
-      return <Selector instance={element} />
+    const selectors = this.instanceElements.map((element, i) => {
+      return <Selector key={i} instance={element} />
     });
     return (
       <div className="tab-menu">
