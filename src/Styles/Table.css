@@ -1,0 +1,17 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+.table thead tr th {
+  color: #000;
+}
+.table thead tr th,
+.table tbody tr td {
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 12px;
+}
+.is-even {
+  background-color: #f2f2f2;
+}
